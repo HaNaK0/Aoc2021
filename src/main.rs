@@ -20,8 +20,8 @@ fn day_1() -> Result<(), Error> {
     let lines = file.lines();
 
     let line_vector : Vec<i32> = lines.map(|item| -> i32 {
-        let number = item.unwrap().parse::<i32>().unwrap();
-        number
+        
+        item.unwrap().parse::<i32>().unwrap()
     }).collect();
 
     let result = line_vector.iter()
