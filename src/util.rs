@@ -1,6 +1,6 @@
-use std::{io::{BufReader, Error, Read, BufRead}, fs::File};
+use std::{io::{BufReader, Error, BufRead}, fs::File};
 
-pub fn load_file<R: Read>(day: usize) -> Result<Vec<String>, Error>{
+pub fn load_file(day: usize) -> Result<Vec<String>, Error>{
     let path = "data/day_".to_string() + &day.to_string() + ".txt";
 
     let file = File::open(path)?;

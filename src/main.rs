@@ -3,14 +3,19 @@ use std::{fs, io::{Error, BufReader, BufRead}};
 mod util;
 pub use crate::util::load_file;
 
+mod day_2;
+pub use crate::day_2::day_2;
+
 fn main() -> Result<(), Error> {
     println!("Hello, world!");
 
-    day_2();
+    let data = load_file(2)?;
+    day_2(data);
 
     Ok(())
 }
 
+#[allow(dead_code)]
 fn day_1() -> Result<(), Error> {
     println!("Day 1");
 
@@ -48,6 +53,3 @@ fn day_1() -> Result<(), Error> {
     Ok(())
 }
 
-fn day_2() {
-
-}
