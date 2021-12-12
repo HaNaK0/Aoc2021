@@ -1,9 +1,12 @@
 use std::{fs, io::{Error, BufReader, BufRead}};
 
+mod util;
+pub use crate::util::load_file;
+
 fn main() -> Result<(), Error> {
     println!("Hello, world!");
 
-    day_1()?;
+    day_2();
 
     Ok(())
 }
@@ -43,4 +46,8 @@ fn day_1() -> Result<(), Error> {
     println!("Result: {}", result.1);
 
     Ok(())
+}
+
+fn day_2() {
+
 }
